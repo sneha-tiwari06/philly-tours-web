@@ -80,7 +80,6 @@ function BookingForm() {
     try {
       const response = await axiosInstance.post("/bookings/book-tour", form);
       alert(response.data.message);
-       // Clear the state after successful submission
     setForm({
         tourId: "",
         blockDate: "",
@@ -88,7 +87,8 @@ function BookingForm() {
         adultPassengers: 0,
         kidPassengers: 0,
       });
-      setDisabledTimes([]); // Reset disabled times as well
+      setDisabledTimes([]); 
+      window.location.reload();
     } catch (err) {
       alert(err.response?.data?.message || "Error booking tour");
     }
