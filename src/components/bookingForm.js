@@ -156,6 +156,7 @@ function BookingForm() {
                     <input
                       type="number"
                       min="1"
+                      value={1}
                       className="form-control"
                       placeholder="Adult Passengers"
                       onChange={(e) =>
@@ -170,6 +171,7 @@ function BookingForm() {
                     <input
                       type="number"
                       min="0"
+                      value={0}
                       className="form-control"
                       placeholder="Kid Passengers"
                       onChange={(e) =>
@@ -182,11 +184,11 @@ function BookingForm() {
                   </div>
                 </div>
 
-                <div className="book_as_private">
+                {/* <div className="book_as_private">
                   <label className="badge bg-danger shadow-sm rounded-pill fw-normal text-uppercase">
                     Book as a private tour +
                   </label>
-                </div>
+                </div> */}
               </div>
 
               {/* Submit */}
